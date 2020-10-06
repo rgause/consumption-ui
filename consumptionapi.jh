@@ -1,0 +1,26 @@
+entity Persona {
+	personaName String unique,
+    securityGroupName String
+}
+
+entity Report {
+	reportName String unique
+}
+
+entity ReportParameter {
+	parameterName String unique
+}
+
+relationship ManyToOne {
+	Report{persona (personaName)} to Persona
+	ReportParameter{report (reportName)} to Report
+}
+
+paginate all with pagination
+
+service all with serviceImpl
+
+
+
+
+
