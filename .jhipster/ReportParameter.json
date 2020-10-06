@@ -1,0 +1,32 @@
+{
+  "name": "ReportParameter",
+  "fields": [
+    {
+      "fieldName": "parameterName",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "report",
+      "otherEntityRelationshipName": "reportParameter",
+      "relationshipName": "report",
+      "otherEntityField": "reportName"
+    }
+  ],
+  "changelogDate": "20201006181939",
+  "entityTableName": "report_parameter",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
